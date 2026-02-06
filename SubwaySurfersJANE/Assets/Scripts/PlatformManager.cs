@@ -19,10 +19,20 @@ public class PlatformManager : MonoBehaviour
 
     private GameObject lastPlatform;
 
-    private void Start()
+    public void StartGame()
     {
+        InitializePlatforms();
         InstantiatePlatform(initialPlatforms);
         transform.position = platformsPivot.position;
+        isRunning = true;
+    }
+
+    private void InitializePlatforms()
+    {
+        foreach (var platform in platformPrefabs)
+        {
+            platform.DeactivateAllObjects();
+        }
     }
 
     public void InstantiatePlatform(int number)
