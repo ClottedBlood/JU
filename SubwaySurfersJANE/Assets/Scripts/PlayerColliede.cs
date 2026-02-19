@@ -9,7 +9,14 @@ public class PlayeColliede : MonoBehaviour
     private string obstacleTag = "Obstacle";
     [SerializeField]
 
+    private string coinTag = "coin";
+    [SerializeField]
+
     private UnityEvent<Transform> onObstacleCollision;
+    [SerializeField]
+
+    private UnityEvent<Transform> onCoinCollected;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +24,10 @@ public class PlayeColliede : MonoBehaviour
         {
             onObstacleCollision?.Invoke(transform);
         }
+        else if (other.CompareTag(coinTag))
+        {
+            onCoinCollected?.Invoke(transform);
+            other.gameObject.SetActive(false);
+        }
     }
-
-
 }

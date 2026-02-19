@@ -10,6 +10,9 @@ public class PlatformManager : MonoBehaviour
     private InstantiatePoolObjects[] platformPrefabs;
     [SerializeField]
 
+    private InstantiatePoolObjects[] securePlatformPrefabs;
+    [SerializeField]
+
     private int initialPlatforms =5;
     [SerializeField]
 
@@ -18,6 +21,8 @@ public class PlatformManager : MonoBehaviour
     private bool isRunning = true;
 
     private GameObject lastPlatform;
+
+    private int PlatformInstantiated = 0;
 
     public void StartGame()
     {
@@ -34,13 +39,29 @@ public class PlatformManager : MonoBehaviour
         {
             platform.DeactivateAllObjects();
         }
+        foreach (var securePlatform in securePlatformPrefabs)
+        {
+            securePlatform.DeactivateAllObjects();
+        }
     }
 
     public void InstantiatePlatform(int number)
     {
         for (int i = 0; i < number; i++)
         {
-            InstantiatePoolObjects instantiatePool = platformPrefabs[Random.Range(0, platformPrefabs.Length)];
+            InstantiatePoolObjects instantiatePool;
+            if(PlatformInstantiated < 2)
+            {
+                instantiatePool = securePlatformPrefabs[Random.Range(0, securePlatformPrefabs.Length)];
+            } else
+            {
+                
+                instantiatePool = platformPrefabs[Random.Range(0, platformPrefabs.Length)];
+                
+                PlatformInstantiated++;
+            }
+            PlatformInstantiated++;
+            
             Vector3 spawnPosition = Vector3.zero;
             if (lastPlatform != null)
             {
