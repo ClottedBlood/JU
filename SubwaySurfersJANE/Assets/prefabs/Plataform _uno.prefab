@@ -77,6 +77,7 @@ MonoBehaviour:
   coins:
   - {fileID: 503406461494106758}
   - {fileID: 3586129712506159880}
+  - {fileID: 3586129712506159880}
 --- !u!1001 &1657201523632382577
 PrefabInstance:
   m_ObjectHideFlags: 0

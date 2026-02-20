@@ -26,13 +26,19 @@ public class Character : MonoBehaviour
     private Transform characterStartPivot;
     [SerializeField]
 
-    private UnityEvent onMoveToside;
+    private UnityEvent onMoveToSide;
     [SerializeField]
 
     private UnityEvent onJump;
     [SerializeField]
 
     private UnityEvent onRoll;
+    [SerializeField]
+    
+    private Collider normalCollider;
+    [SerializeField]
+
+    private Collider rollCollider;
 
    
 
@@ -51,10 +57,12 @@ public class Character : MonoBehaviour
 
     public void StartGame()
     {
+        normalCollider.enabled =true;
+        rollCollider.enabled = false;
         isRolling = false;
         isMoving = false;
         isActive = true;
-        characterAnimator.Play(characterData.runAnimationName, 0, 0f);
+        characterAnimator.Play(characterData.jumpAnimationName, 0, 0f);
         transform.position = characterStartPivot.position;
     }
 
@@ -87,6 +95,8 @@ public class Character : MonoBehaviour
         characterAnimator.Play(characterData.rollAnimationName, 0 , 0f);
         onRoll?.Invoke();
         isRolling = true;
+        normalCollider.enabled = false;
+        rollCollider.enabled = true;
         StartCoroutine(ResetRoll());
     }
 
@@ -104,7 +114,7 @@ public class Character : MonoBehaviour
     private void Move(Vector3 direction)
     {
         if (isMoving || !isActive) return;
-        onMoveToside?.Invoke();
+        onMoveToSide?.Invoke();
         characterAnimator.Play(characterData.moveAnimationName, 0, 0f);
         isMoving = true;
         Vector3 targetPosition = transform.position + direction * distanceToMove;
@@ -119,6 +129,8 @@ public class Character : MonoBehaviour
     {
         yield return new WaitForSeconds(characterAnimator.GetCurrentAnimatorStateInfo(0).length);
         isRolling = false;
+        normalCollider.enabled = true;
+        rollCollider.enabled = false;
     }
     public void OnCollisionEnter(Collision collision)
     {

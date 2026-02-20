@@ -631,6 +631,18 @@ MonoBehaviour:
           m_StringArgument: musica
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1081333853}
+        m_TargetAssemblyTypeName: CoinsManager, Assembly-CSharp
+        m_MethodName: SetCoins
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: musica
+          m_BoolArgument: 1
+        m_CallState: 2
   onGameLose:
     m_PersistentCalls:
       m_Calls:
@@ -1440,6 +1452,8 @@ GameObject:
   - component: {fileID: 1062434493}
   - component: {fileID: 1062434495}
   - component: {fileID: 1062434494}
+  - component: {fileID: 1062434497}
+  - component: {fileID: 1062434496}
   m_Layer: 5
   m_Name: CoinsUI
   m_TagString: Untagged
@@ -1465,7 +1479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -706, y: -114}
+  m_AnchoredPosition: {x: -676.3, y: -114}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1062434494
@@ -1506,6 +1520,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062434492}
   m_CullTransparentMesh: 1
+--- !u!114 &1062434496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062434492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8d1924560fe7e48b86227ab5566f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinsUI
+  coinsText: {fileID: 952387974}
+  animator: {fileID: 1062434497}
+  animationName: Wiggle
+--- !u!95 &1062434497
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062434492}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c281f699cde3ebe49a809099a8c6fffe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1081333851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081333852}
+  - component: {fileID: 1081333853}
+  m_Layer: 0
+  m_Name: CoinsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1081333852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081333851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 372.62952, y: 1860.25, z: 324.18713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081333853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081333851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bd888d78c8bb244acd5f815adb1859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinsManager
+  onCoinsChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1062434496}
+        m_TargetAssemblyTypeName: CoinsUI, Assembly-CSharp
+        m_MethodName: UpdateCoinsText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1162487408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,7 +2276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -9.6, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814039294
@@ -2217,6 +2327,7 @@ GameObject:
   - component: {fileID: 1998009894}
   - component: {fileID: 1998009895}
   - component: {fileID: 1998009896}
+  - component: {fileID: 1998009897}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -2308,21 +2419,9 @@ MonoBehaviour:
   distanceToMove: 2
   moveDuration: 0.2
   characterStartPivot: {fileID: 628627995}
-  onMoveToside:
+  onMoveToSide:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1043274154}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Alado
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onJump:
     m_PersistentCalls:
       m_Calls:
@@ -2353,6 +2452,8 @@ MonoBehaviour:
           m_StringArgument: Rodar
           m_BoolArgument: 0
         m_CallState: 2
+  normalCollider: {fileID: 1998009893}
+  rollCollider: {fileID: 1998009897}
 --- !u!114 &1998009896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2424,15 +2525,48 @@ MonoBehaviour:
       - m_Target: {fileID: 1316120843}
         m_TargetAssemblyTypeName: InstantiatePoolObjects, Assembly-CSharp
         m_MethodName: InstantiateObject
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1998009892}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1081333853}
+        m_TargetAssemblyTypeName: CoinsManager, Assembly-CSharp
+        m_MethodName: AddCoins
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!135 &1998009897
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998009891}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.29
+  m_Center: {x: 0, y: 0.24, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2458,3 +2592,4 @@ SceneRoots:
   - {fileID: 1043274155}
   - {fileID: 1038427684}
   - {fileID: 1316120844}
+  - {fileID: 1081333852}
