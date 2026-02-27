@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &50760220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50760222}
+  - component: {fileID: 50760221}
+  m_Layer: 0
+  m_Name: InstantiateJumpPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &50760221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50760220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92499f854418264f8f9df2c9a4fdb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
+  prefab: {fileID: 2329637412482070265, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
+--- !u!4 &50760222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50760220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.12249, y: 0.13275, z: 0.24748}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137076350
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cf4f116f7631045afdb29c1f3acf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoinstsUI
-  text: {fileID: 0}
+  text: {fileID: 1723837601}
 --- !u!114 &424341669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1665,6 +1710,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1005823290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005823291}
+  - component: {fileID: 1005823292}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1005823291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005823290}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.12249, y: 0.13275, z: 0.24748}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005823292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005823290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971c46e54d67c064b874ce264b34f140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoweUpsManager
+  minPlatformsNumber: 5
+  maxPlatformsNumber: 7
+  powerUpPools:
+  - {fileID: 50760221}
 --- !u!1 &1038427682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +2084,9 @@ MonoBehaviour:
   - {fileID: 1038427683}
   initialPlatforms: 10
   speed: 5
+  onPlatformPassed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1166851745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c2b974c5c3433144a36fc970845cf08, type: 3}
@@ -3170,7 +3266,7 @@ GameObject:
   - component: {fileID: 2084981284}
   - component: {fileID: 2084981283}
   m_Layer: 0
-  m_Name: JumPoweUp
+  m_Name: JumPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3209,63 +3305,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6105833855902146628
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.7195
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.94367
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919479975220935734, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329637412482070265, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
-      propertyPath: m_Name
-      value: BootsPwerUp
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 78cfddd9b823bbe40baa7b408c66328b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3294,4 +3333,5 @@ SceneRoots:
   - {fileID: 1081333852}
   - {fileID: 1833472309}
   - {fileID: 2084981284}
-  - {fileID: 6105833855902146628}
+  - {fileID: 1005823291}
+  - {fileID: 50760222}
