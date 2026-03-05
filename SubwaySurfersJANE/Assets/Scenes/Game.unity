@@ -119,6 +119,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &24430471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24430473}
+  - component: {fileID: 24430472}
+  m_Layer: 0
+  m_Name: MagnetPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &24430472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24430471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5def4df2daa642b41b5ca0d5e036c195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagnetPowerUp
+  magnet: {fileID: 0}
+  duration: 5
+  magnetCollider: {fileID: 0}
+--- !u!4 &24430473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24430471}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.60338, y: 0, z: -2.34901}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50760220
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +569,11 @@ RectTransform:
   m_AnchoredPosition: {x: -616.8, y: -83.3}
   m_SizeDelta: {x: 320, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &428117927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2530251679569251172, guid: f9a8be3ad5b4836499124c19bfd26ed3, type: 3}
+  m_PrefabInstance: {fileID: 792750404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453347932
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +907,86 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!1001 &545314639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 428117927}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.044506304
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15676549
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.03425599
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.12768926
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7181298
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.025726015
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.68361044
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -8.524
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 268.103
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -192.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      propertyPath: m_Name
+      value: trump_lp_anim_iddle01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110081935}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110081936}
+  m_SourcePrefab: {fileID: 100100000, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+--- !u!4 &545314640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+  m_PrefabInstance: {fileID: 545314639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &624258793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1317,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 281297371296666442, guid: f9a8be3ad5b4836499124c19bfd26ed3, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1166851746}
+    - targetCorrespondingSourceObject: {fileID: -2530251679569251172, guid: f9a8be3ad5b4836499124c19bfd26ed3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 545314640}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f9a8be3ad5b4836499124c19bfd26ed3, type: 3}
       insertIndex: -1
@@ -1217,6 +1352,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &824504529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 824504531}
+  - component: {fileID: 824504530}
+  m_Layer: 0
+  m_Name: instantiateMagnet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &824504530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824504529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92499f854418264f8f9df2c9a4fdb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
+  prefab: {fileID: 2482972848644450011, guid: 4657403a6e4cd8542bf9457b424d2440, type: 3}
+--- !u!4 &824504531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824504529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17803, y: 0.90136, z: 0.31332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857436665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1765,7 @@ GameObject:
   - component: {fileID: 961739752}
   - component: {fileID: 961739751}
   - component: {fileID: 961739750}
+  - component: {fileID: 961739754}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1710,6 +1891,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961739754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90668144cda047941858f651e495cbb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  target: {fileID: 1998009892}
+  smoothSpeed: 0.125
 --- !u!1 &1005823290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +1953,8 @@ MonoBehaviour:
   maxPlatformsNumber: 7
   powerUpPools:
   - {fileID: 50760221}
+  - {fileID: 824504530}
+  powerUpOffset: 2
 --- !u!1 &1038427682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2225,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1110081934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ea927547a323c6545abd0afc678a6e64, type: 3}
+  m_PrefabInstance: {fileID: 545314639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1110081935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110081934}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 26.54213, y: 11.652189, z: 1}
+  m_Center: {x: -4.1294966, y: 2.2503645, z: -0.000007562943}
+--- !u!114 &1110081936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110081934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857b5f278063ecb4a85e486f069df556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagnetCollider
+  character: {fileID: 1998009892}
 --- !u!1 &1162487408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,6 +3404,33 @@ MonoBehaviour:
   obstacleTag: obstacle
   coinTag: Coin
   JumpPoweUpTag: JumpPowerUp
+  onMagnetCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24430472}
+        m_TargetAssemblyTypeName: MagnetPowerUp, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1316120843}
+        m_TargetAssemblyTypeName: InstantiatePoolObjects, Assembly-CSharp
+        m_MethodName: InstantiateObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onObstacleCollision:
     m_PersistentCalls:
       m_Calls:
@@ -3230,6 +3493,33 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCoinCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1316120843}
+        m_TargetAssemblyTypeName: InstantiatePoolObjects, Assembly-CSharp
+        m_MethodName: InstantiateObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1998009892}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1081333853}
+        m_TargetAssemblyTypeName: CoinsManager, Assembly-CSharp
+        m_MethodName: AddCoins
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3335,3 +3625,5 @@ SceneRoots:
   - {fileID: 2084981284}
   - {fileID: 1005823291}
   - {fileID: 50760222}
+  - {fileID: 824504531}
+  - {fileID: 24430473}

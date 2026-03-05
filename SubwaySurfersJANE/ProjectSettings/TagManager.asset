@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - BootsPoweUp
   - JumpPowerUp
+  - Magnet
   layers:
   - Default
   - TransparentFX
