@@ -9,6 +9,15 @@ public class Platform : MonoBehaviour
 
     private List<GameObject> powerUps = new List<GameObject>();
 
+    private float colliderSize;
+
+    public float ColliderSize => colliderSize;
+
+    private void Awake()
+    {
+        colliderSize = GetComponent<Collider>().bounds.size.z * 0.5f;
+    }
+
     private void OnEnable()
     {
         ActivateCoins();

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3235133581250956314}
   - component: {fileID: 5994946523323676594}
+  - component: {fileID: -7040866045691898688}
   m_Layer: 0
   m_Name: Plataform5
   m_TagString: Ground
@@ -74,6 +75,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.2319055, y: 0.52250886, z: 4.8829823}
   m_Center: {x: -0.038856506, y: -0.23874557, z: -0.049617756}
+--- !u!114 &-7040866045691898688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5270347949416479047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fe65005549a414dab661f507bb4422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Platform
+  coins: []
 --- !u!1001 &451839755094270180
 PrefabInstance:
   m_ObjectHideFlags: 0

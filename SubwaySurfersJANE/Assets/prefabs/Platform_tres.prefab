@@ -374,6 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291943839201145814}
   - component: {fileID: 8173046202983055978}
+  - component: {fileID: -5743294670051732312}
   m_Layer: 0
   m_Name: Platform_tres
   m_TagString: Ground
@@ -429,6 +430,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.7659516, y: 0.4638548, z: 4.8027434}
   m_Center: {x: 0.01622513, y: -0.2680726, z: 0.015444019}
+--- !u!114 &-5743294670051732312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719992355934275071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fe65005549a414dab661f507bb4422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Platform
+  coins: []
 --- !u!1001 &2336832058809603080
 PrefabInstance:
   m_ObjectHideFlags: 0
