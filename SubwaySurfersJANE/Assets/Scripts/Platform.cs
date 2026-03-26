@@ -22,7 +22,10 @@ public class Platform : MonoBehaviour
     {
         ActivateCoins();
     }
-
+    public bool HasCoin()
+    {
+        return coins.Length > 0;
+    }
     private void ActivateCoins()
     {
         foreach (var coin in coins)
