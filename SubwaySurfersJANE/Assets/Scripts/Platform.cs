@@ -22,7 +22,7 @@ public class Platform : MonoBehaviour
     {
         ActivateCoins();
     }
-    public bool HasCoin()
+    public bool HasCoins()
     {
         return coins.Length > 0;
     }

@@ -43,6 +43,7 @@ public class PoweUpsManager : MonoBehaviour
 
     private void SpawnPowerUp(Platform platform)
     {
+        if (!platform.HasCoins()) return;
         InstantiatePoolObjects pool = powerUpPools[Random.Range(0, powerUpPools.Length)];
         pool.InstantiateObject(Vector3.zero);
         GameObject powerUp = pool.GetCurrentObject(); 

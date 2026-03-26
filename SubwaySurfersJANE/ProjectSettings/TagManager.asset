@@ -10,6 +10,7 @@ TagManager:
   - BootsPoweUp
   - JumpPowerUp
   - Magnet
+  - JetPack
   layers:
   - Default
   - TransparentFX
