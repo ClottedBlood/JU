@@ -611,7 +611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -616.8, y: -83.3}
+  m_AnchoredPosition: {x: -616.80005, y: -83.299805}
   m_SizeDelta: {x: 320, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &428117927 stripped
@@ -940,6 +940,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 24430472}
         m_TargetAssemblyTypeName: MagnetPowerUp, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: musica
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 984490011}
+        m_TargetAssemblyTypeName: JetPackPowerUp, Assembly-CSharp
         m_MethodName: Deactivate
         m_Mode: 1
         m_Arguments:
@@ -1566,6 +1578,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857436665}
   m_CullTransparentMesh: 1
+--- !u!1 &863202964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad11e8b27176d7a4aa14d839bea6b98b, type: 3}
+  m_PrefabInstance: {fileID: 2081012704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &880891607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,6 +2082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984490010}
+  - component: {fileID: 984490011}
   m_Layer: 0
   m_Name: JetPackPowerUp
   m_TagString: Untagged
@@ -2087,6 +2105,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984490011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984490009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3ac21a202363641a0a83656adcfcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JetPackPowerUp
+  flyingHeight: 4.5
+  character: {fileID: 1998009895}
+  jetPackAsset: {fileID: 863202964}
+  flyDuration: 5
+  onJetpackActivated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 039d0abcffb5bfa4fadd6738201f532d, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &987166392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2230,7 @@ MonoBehaviour:
   powerUpPools:
   - {fileID: 50760221}
   - {fileID: 824504530}
+  - {fileID: 939473871}
   powerUpOffset: 2
 --- !u!1 &1038427682
 GameObject:
@@ -2564,6 +2614,8 @@ MonoBehaviour:
   - {fileID: 1419579632}
   securePlatformPrefabs:
   - {fileID: 1038427683}
+  flyingPlatformPrefabs: []
+  flyingPlatformHeight: 4.5
   initialPlatforms: 10
   minSpeed: 5
   maxSpeed: 12
@@ -3698,6 +3750,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
   m_PrefabInstance: {fileID: 1730081385}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1783125202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5979371957942461915}
+    m_Modifications:
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3355527
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4606885
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5948758
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.70711213
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 449.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414914658353858876, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+      propertyPath: m_Name
+      value: moneda 1peso
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+--- !u!4 &1783125203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5930548328190219142, guid: 45f0b321bda343a488e32669dcaa41f5, type: 3}
+  m_PrefabInstance: {fileID: 1783125202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1788067217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 281297371296666442, guid: f9a8be3ad5b4836499124c19bfd26ed3, type: 3}
@@ -4084,12 +4206,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayeColliede
   obstacleTag: obstacle
   coinTag: Coin
-  jumpPowerUpTag: jumpPowerUp
-  onMagnetCollected:
+  jumpPowerUpTag: JumpPowerUp
+  jetpackTag: JetPack
+  onJetpackCollected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 24430472}
-        m_TargetAssemblyTypeName: MagnetPowerUp, Assembly-CSharp
+      - m_Target: {fileID: 984490011}
+        m_TargetAssemblyTypeName: JetPackPowerUp, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
@@ -4098,54 +4221,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1316120843}
-        m_TargetAssemblyTypeName: InstantiatePoolObjects, Assembly-CSharp
-        m_MethodName: InstantiateObject
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1448238822}
-        m_TargetAssemblyTypeName: InstantiatePoolObjects, Assembly-CSharp
-        m_MethodName: InstantiateObject
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1043274154}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: iman
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 24430472}
-        m_TargetAssemblyTypeName: MagnetPowerUp, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: iman
           m_BoolArgument: 0
         m_CallState: 2
   onObstacleCollision:
@@ -4352,7 +4427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ad11e8b27176d7a4aa14d839bea6b98b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -4419,6 +4494,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &5979371957942461915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059374154531799821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.23802145, y: 0, z: -0.18260807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1783125203}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6423263738604715326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059374154531799821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fe65005549a414dab661f507bb4422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Platform
+  coins: []
+--- !u!1 &7059374154531799821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5979371957942461915}
+  - component: {fileID: 7447342454073617734}
+  - component: {fileID: 6423263738604715326}
+  - component: {fileID: 7447342454073617735}
+  m_Layer: 0
+  m_Name: FlyingPlatform
+  m_TagString: Ground
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &7447342454073617734
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059374154531799821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.841012, y: 0.4606887, z: 4.672565}
+  m_Center: {x: -0.0053199865, y: -0.26965564, z: 0.09166771}
+--- !u!65 &7447342454073617735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059374154531799821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4456,3 +4621,4 @@ SceneRoots:
   - {fileID: 1832468344}
   - {fileID: 939473872}
   - {fileID: 984490010}
+  - {fileID: 5979371957942461915}

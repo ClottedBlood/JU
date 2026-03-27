@@ -72,11 +72,15 @@ public class Character : MonoBehaviour
 
     public bool IsActive => isActive;
 
+    private void PlayGroundAnimation(string runAnimationName)
+    {
+        if (isFlying) return;
+        characterAnimator.Play(runAnimationName, 0, 0f);
+    } 
     private void Awake()
     {
-        characterRigidbody=GetComponent<Rigidbody>();
-    } 
-
+        characterRigidbody = GetComponent<Rigidbody>();
+    }
     public void StartGame()
     {
         normalCollider.enabled =true;
@@ -97,11 +101,11 @@ public class Character : MonoBehaviour
 
     public void Jump()
     {
-        if(!isActive) return;
+        if(!isActive || isFlying) return;
         if (isGrounded)
         {
             onJump?.Invoke();
-            characterAnimator.Play(characterData.jumpAnimationName, 0, 0f);
+            PlayGroundAnimation(characterData.jumpAnimationName);
             characterRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
@@ -109,12 +113,12 @@ public class Character : MonoBehaviour
 
     public void MoveDown()
     {
-        if (!isActive || isRolling) return;
+        if (!isActive || isRolling || isFlying) return;
         if (!isGrounded)
         {
             characterRigidbody.AddForce(Vector3.down * jumpForce *2, ForceMode.Impulse);
         }
-        characterAnimator.Play(characterData.rollAnimationName, 0 , 0f);
+        PlayGroundAnimation(characterData.rollAnimationName);
         onRoll?.Invoke();
         isRolling = true;
         normalCollider.enabled = false;
@@ -137,7 +141,7 @@ public class Character : MonoBehaviour
     {
         if (isMoving || !isActive) return;
         onMoveToSide?.Invoke();
-        characterAnimator.Play(characterData.moveAnimationName, 0, 0f);
+       PlayGroundAnimation(characterData.moveAnimationName);
         isMoving = true;
         Vector3 targetPosition = transform.position + direction * distanceToMove;
 
