@@ -67,6 +67,7 @@ public class PlatformManager : MonoBehaviour
     {
         InstantiatePoolObjects instantiatePool = flyingPlatformPrefabs[Random.Range (0, flyingPlatformPrefabs.Length)];
         Vector3 spawnPosition = character.position - transform.position + Vector3.forward * 2f;
+        spawnPosition.x = 0f;
         instantiatePool.InstantiateObject(spawnPosition);
         GameObject createdPlatform = instantiatePool.GetCurrentObject();
         Platform newPlatform = createdPlatform.GetComponent<Platform>();
