@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5994946523323676594}
   - component: {fileID: -7040866045691898688}
   m_Layer: 0
-  m_Name: Plataform5
+  m_Name: Plataform_4
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fe65005549a414dab661f507bb4422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Platform
-  coins: []
+  coins:
+  - {fileID: 2910849722914530981}
+  - {fileID: 4042627749831254368}
+  - {fileID: 4271627854972302172}
 --- !u!1001 &451839755094270180
 PrefabInstance:
   m_ObjectHideFlags: 0

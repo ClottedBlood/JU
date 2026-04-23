@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 553527536335784682}
   - component: {fileID: 6612965909882529218}
   m_Layer: 0
-  m_Name: Plataform_dos
+  m_Name: Plataform_5
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,6 +204,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   coins:
   - {fileID: 51718407243588944}
+  - {fileID: 8471006015707386911}
+  - {fileID: 2650999861614502276}
 --- !u!1001 &284240988297953533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,6 +275,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7aacada3e7c4042bb71abca8d5a5b1, type: 3}
+--- !u!1 &2650999861614502276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2827114842010116473, guid: 8b7aacada3e7c4042bb71abca8d5a5b1, type: 3}
+  m_PrefabInstance: {fileID: 284240988297953533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3753790482854248290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4029023067092025247, guid: 8b7aacada3e7c4042bb71abca8d5a5b1, type: 3}
@@ -1429,6 +1436,11 @@ PrefabInstance:
 --- !u!4 &7304018142228843257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4029023067092025247, guid: 8b7aacada3e7c4042bb71abca8d5a5b1, type: 3}
+  m_PrefabInstance: {fileID: 5959637724407330150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8471006015707386911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2827114842010116473, guid: 8b7aacada3e7c4042bb71abca8d5a5b1, type: 3}
   m_PrefabInstance: {fileID: 5959637724407330150}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5998041317758140499
